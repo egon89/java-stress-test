@@ -34,3 +34,8 @@ tasks.withType<Test>().configureEach {
 tasks.withType<JavaExec>().configureEach {
     jvmArgs("--enable-preview")
 }
+
+tasks.register<Copy>("copyRuntimeLibs") {
+    from(configurations.runtimeClasspath)
+    into(layout.buildDirectory.dir("dependency-libs"))
+}
