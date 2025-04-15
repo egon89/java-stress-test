@@ -1,4 +1,22 @@
-# java stress test
+# Java Stress Test
+The Stress Test Application is a command-line tool designed to perform HTTP stress testing on a target URL.
+It allows users to send multiple HTTP requests concurrently, measure response times, and generate a summary report of 
+the results. The application is implemented in Java and uses the `picocli` library for command-line parsing.
+
+## Features
+- Supports multiple HTTP methods: `GET`, `HEAD`, `PATCH`, `POST`, `PUT`, `DELETE`.
+- Allows configuration of:
+   - Target URL.
+   - Total number of requests.
+   - Number of concurrent requests.
+   - Interval between requests.
+   - Custom request headers.
+   - Request body for applicable HTTP methods.
+- Provides a detailed summary report, including:
+   - Total requests sent.
+   - Status code distribution.
+   - Average response time.
+- Uses structured concurrency for efficient request handling.
 
 ## Usage
 ### Prerequisites
